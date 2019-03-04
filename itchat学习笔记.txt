@@ -1,0 +1,9 @@
+                                                                            import itchat
+
+                                         1、itchat.auto_login(hotreload = True)  //这个参数主要是为了短时间内运行程序不需要再次扫描二维码
+
+                                         2、itchat中支持直接给filehelper发送消息。如果需要指定某个联系人，需要先使用search_friend的方法先找到
+                                         这个联系人，然后再次发送消息
+
+                                             users = itchat.search_friends("张国栋2")    #找到用户
+                                             userName = users[0]['UserName']
