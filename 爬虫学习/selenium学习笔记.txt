@@ -1,0 +1,35 @@
+import selenium
+from selenium import webdriver
+
+主要用来自动化测试，解决js渲染问题，不过效率比较低
+注意打开浏览器之后，必须关闭,broswer.close()//broswer.quit()
+
+broswer = webdriver.Chrome()	#驱动谷歌浏览器
+broswer.get(url)	#打开某个页面
+
+可以设置一个隐式等待时间，等待元素加载出来
+
+html = broswer.page_source
+
+查找某个元素，可以使用id、css、xpath都可以查找
+
+find_element_by_id
+find_element_by_xpath
+find_element_by_name
+find_element_by_css_selector
+
+元素交互操作
+
+from selenium import webdriver
+import time
+
+broswer = webdriver.Chrome()
+
+input = broswer.get(url)
+input.send_keys(str)
+time.sleep(4)
+input.send_keys(str)
+input.clear()
+
+button = broswer.find_element_by_class_name(str)
+button.click()

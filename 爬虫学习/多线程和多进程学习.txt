@@ -1,0 +1,10 @@
+线程和进程的关系：
+	进程由多个线程组成
+	
+import threading
+
+t1 = threading.Thread(target = )	#创建一个子线程,target表示要执行的
+对象，传入的是函数名，不是调用函数，所以不需要加括号
+t1.start()	#启动线程
+
+threading.enumerate()	#查看当前线程数

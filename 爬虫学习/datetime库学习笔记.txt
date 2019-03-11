@@ -1,0 +1,5 @@
+                                                                        import datetime
+                                                             1、t = datetime.datetime.now()  //返回的是当前的时间
+                                                             2、t.hour 当前时间的小时
+                                                                                            //类型全部都是int类型
+                                                             3、t.minute 当前时间的分钟

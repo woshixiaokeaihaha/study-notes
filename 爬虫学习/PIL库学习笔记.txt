@@ -1,0 +1,25 @@
+                                                        from PIL import Image
+														from PIL import ImageFilter	//PIL库中的过滤器模块
+														from PIL import blend //PIL库中合并图片的模块
+
+                          1、Image.new('RGBA',(640,640)) //新建一个图片，前面是model，后面是尺寸
+                          2、Image.open('HeadImag/' + i) //打开一张图片，如果不在当前路径下，需要加上路径
+                          3、img.resize((width,width),Image.ANTIALIAS)   //调整图片的尺寸，前面是尺寸，后面的
+                          参数是防止转换之后图片变得模糊
+                          4、newImag.paste(img,(x * width,y * width))    //图片的粘贴，newImag是新的图片，需要做的是把img
+                          贴到newImag,后面是坐标，横纵坐标
+                          5、newImag.save('all.png') //图片的保存，把新建的图片保存到本地，后面是文件名
+						  6、Image.new(mode,size,color)	//这些属性可以直接赋值修改，只需从PIL库中导入Image模块即可
+						  7、imag = Image.open('path')
+							imag.filter(ImageFilter.BLUR)	//对照片进行滤波器处理(均值滤波)
+							imag.filter(ImageFilter.CONTOUR)	//对照片进行找轮廓滤波
+							imag.filter(ImageFilter.FIND_EDGES)	//对照片进行边缘检测滤波
+						  8、Image.blend(imag1,imag2,alpha)	-->  image
+								使用两张给定的图像及透明度alpha,插值出新的图像。必须保证两张图像拥有同样的模式和尺寸
+							out = imag1(1-alpha) + imag2(alpha)
+						  9、	imag = Image.open('path')
+								imag.split()	-->	sequence
+								返回当前图片各个通道组成的一个元祖
+								im = Image.composite(im1,im2,mask)	-->		imag
+								复合类使用给定的两张图像及mask图像作为透明度，其中mask模式可以是
+								’1‘ 、 ’L‘、’RGBA‘，所有图像必须拥有相同的尺寸

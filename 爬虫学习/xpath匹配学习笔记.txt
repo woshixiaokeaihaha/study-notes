@@ -1,0 +1,4 @@
+								from lxml import etree
+						1、模糊匹配：
+							//div[contains(@class,"job_advantage")]
+						2、谓词中的下标是从1开始的，不是从0开始的

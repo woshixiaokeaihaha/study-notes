@@ -1,0 +1,15 @@
+                                                            import requests
+                                  1、requests.get(url,params = params,headers = headers,proxies = proxy)  //get请求，一般的请求方式，只要对于服务器的状态没有造成改变的都可以使用get请求
+                                  2、requests.post(url,data = data,headers = headers)    //post请求，一般在请求登录时需要使用post请求
+                                  3.session = requests.session()    //保持登录的时候需要使用session
+                                    session.get()
+                                                       //操作方法等同于requests的操作方法
+                                    session.post()
+
+                                    如果需要使用ip代理，只需要在get请求或者post请求中加入proxies参数就可以了
+
+                                    以上就是requests库的基本使用方法
+
+                                    建立时间：
+                                            2019年1月15日16:40:37
+

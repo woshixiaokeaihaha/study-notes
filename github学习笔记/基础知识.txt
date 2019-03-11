@@ -1,0 +1,44 @@
+仓库（repository）
+	你想在github上开源一个项目，必须新建立一个仓库，用仓库存放
+项目代码，一个项目对应一个仓库
+收藏（star）
+	收藏仓库，下次方便检索
+复制克隆项目（fork）
+	独立存在
+发起请求（pull request）
+	向forked那个项目里面发起一个请求，更新代码
+关注（watch）
+	关注的人发动态会看得到通知
+事务卡片（issue）
+	发现代码bug
+
+github主页
+仓库主页
+个人主页
+
+
+注意安装git不能有中文路径
+Git目的
+	通过git管理github托管项目
+
+常用指令
+	git add file（把文件从工作区提交到暂存区）
+	git status	//文件状态
+	git commit -m '命令描述'（提交到本地仓库）
+	git push 提交到远程仓库
+	查看设置 git config --list
+
+初始化：
+	设置用户名
+		git config --global user.name 'python-deathfans'
+	设置用户名邮箱
+		git config --global user.name ''
+	新的仓库
+		创建文件夹
+		在文件夹内初始化仓库
+		git init
+
+把文件夹内所有文件push到仓库
+	git add .
+	git commit -m '描述'
+	git push-u origin master

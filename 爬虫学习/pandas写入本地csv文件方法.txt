@@ -1,0 +1,11 @@
+import pandas as pd
+
+data 	#必须是list类型
+
+data = pd.DataFrame(data)
+
+data.to_csv('path'，index = False)	#只有DataFrame格式的数据才有to_csv()方法
+
+第一个参数是路径，可以填相对路径，也可以填绝对路径
+index = True or False	表示索引行加上或者不加上
+header = True or False  表示索引列加上或者不加上
